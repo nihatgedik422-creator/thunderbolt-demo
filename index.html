@@ -51,16 +51,6 @@
     </div>
     <script src="js/intro.js"></script>
 
-    <div id="cap" aria-hidden="true">
-      <div class="sh"></div>
-      <div class="zm">
-        <div class="fl">
-          <img class="f" src="img/casquette-face.png" alt="" />
-          <img class="b" src="img/casquette-profil.png" alt="" />
-        </div>
-      </div>
-    </div>
-
     <header id="nav">
       <a class="logo" href="#hero">
         <i>
@@ -71,7 +61,7 @@
       <nav class="pill mono" aria-label="Sections">
         <span class="hl"></span>
         <a href="#hero" data-s="hero">Accueil</a>
-        <a href="#inside" data-s="inside">Détails</a>
+        <a href="#details" data-s="details">Détails</a>
         <a href="#order" data-s="order">Commander</a>
         <a href="#faq" data-s="faq">Questions</a>
       </nav>
@@ -84,159 +74,203 @@
     </header>
 
     <main>
-      <section id="hero" aria-label="La casquette Thunderbolt">
+      <section id="hero" aria-labelledby="hero-h">
         <div class="reveal"></div>
-        <div class="bits back"></div>
-        <p class="eyebrow mono">Thunderbolt · brodée en France</p>
-        <p class="nojs nojs-title" aria-hidden="true">Brodée</p>
-        <img class="nojs nojs-cap" src="img/casquette-face.png" alt="" />
-        <p class="title" id="title" aria-hidden="true"></p>
-        <div class="bits front"></div>
-        <div class="hud">
-          <div class="hero-info">
-            <h1>La casquette Thunderbolt</h1>
-            <p class="hero-lead">Logo éclair brodé fil par fil, en France. Taille unique, réglable.</p>
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow mono">Thunderbolt · brodée en France</p>
+            <h1 id="hero-h">
+              La casquette
+              <span>Thunderbolt</span>
+            </h1>
+            <p class="hero-lead">
+              Une casquette blanche et sobre, avec le logo éclair brodé fil par fil. Taille unique, réglable.
+            </p>
             <div class="hero-buy">
               <span class="hero-price">30 €</span>
-              <a class="hero-cta" href="#order">Acheter</a>
+              <a class="btn btn--dark" href="#order">Acheter</a>
+              <a class="btn btn--line" href="#details">Voir les détails</a>
             </div>
+            <ul class="hero-facts mono">
+              <li>Brodée en France</li>
+              <li>Taille unique</li>
+              <li>Livraison 5 €</li>
+            </ul>
           </div>
-          <div class="hero-ctrl">
-            <span class="hero-view mono" id="tagline">Face · logo éclair brodé</span>
-            <div class="counter" aria-hidden="true">
-              <span class="dig"><span>0</span></span>
-              <span class="dig" id="cnt">
-                <span>
-                  1
-                  <br />
-                  2
-                </span>
-              </span>
-              <small>/02</small>
+          <div class="hero-stage" id="stage">
+            <div class="cap3d" id="heroCap">
+              <div class="sh"></div>
+              <div class="fl">
+                <img
+                  class="f"
+                  src="img/casquette-face.png"
+                  alt="La casquette blanche Thunderbolt vue de face, logo éclair orange et nom brodé en noir"
+                  width="513"
+                  height="486"
+                  fetchpriority="high"
+                />
+                <img class="b" src="img/casquette-profil.png" alt="" width="548" height="456" />
+              </div>
             </div>
-            <button id="next" aria-label="Tourner la casquette">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M20 12a8 8 0 1 1-2.6-5.9" />
-                <path d="M20 4v5h-5" />
-              </svg>
-            </button>
+            <div class="stage-ctrl">
+              <span class="mono" id="viewLabel">Face · logo éclair brodé</span>
+              <button id="next" type="button" aria-label="Tourner la casquette">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M20 12a8 8 0 1 1-2.6-5.9" />
+                  <path d="M20 4v5h-5" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+        <i class="bolt-deco b1" aria-hidden="true">
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
+        <i class="bolt-deco b2" aria-hidden="true">
+          <svg class="boltsvg"><use href="#bolt" /></svg>
+        </i>
       </section>
 
-      <section id="inside" aria-label="Les détails">
-        <div class="sticky">
-          <div class="halo"></div>
-          <div class="dark"></div>
-          <div class="stormtitle">
-            Plus qu'une casquette,
-            <br />
-            <em>une identité.</em>
+      <section id="details" aria-labelledby="details-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <p class="eyebrow mono">Les détails</p>
+            <h2 id="details-h">Faite pour durer</h2>
+            <p>
+              Brodée en France sur un coton épais, la casquette Thunderbolt garde sa forme et son logo, jour
+              après jour.
+            </p>
           </div>
-          <div id="inBar"></div>
-          <div class="steps">
-            <div class="step">
-              <span class="n mono">01 / 04 · Le logo</span>
+          <div class="cards">
+            <article class="card">
+              <div class="card-img">
+                <img
+                  src="img/broderie.png"
+                  alt="Gros plan sur le logo éclair et le nom brodés"
+                  loading="lazy"
+                />
+              </div>
               <h3>Brodé fil par fil</h3>
               <p>
                 L'éclair et le nom sont brodés, pas imprimés : du relief, de la tenue, et un logo qui ne
                 s'efface pas.
               </p>
-            </div>
-            <div class="step">
-              <span class="n mono">02 / 04 · Le profil</span>
+            </article>
+            <article class="card">
+              <div class="card-img card-img--cut">
+                <img
+                  src="img/casquette-profil.png"
+                  alt="La casquette vue de profil, visière vers la droite"
+                  loading="lazy"
+                />
+              </div>
               <h3>Une ligne sobre</h3>
               <p>Une forme structurée et une visière légèrement courbée : une casquette qui va avec tout.</p>
-            </div>
-            <div class="step">
-              <span class="n mono">03 / 04 · La matière</span>
+            </article>
+            <article class="card">
+              <div class="card-img">
+                <img src="img/visiere.png" alt="Les rangs de surpiqûres sur la visière" loading="lazy" />
+              </div>
               <h3>Coton épais</h3>
-              <p>
-                Un coton dense et des surpiqûres régulières sur la visière, pour une casquette qui garde sa
-                forme.
-              </p>
-            </div>
-            <div class="step">
-              <span class="n mono">04 / 04 · L'atelier</span>
-              <h3>Brodée en France</h3>
-              <p>
-                Une démarche locale, maîtrisée de bout en bout. Taille unique, réglable, faite pour durer.
-              </p>
-            </div>
-          </div>
-          <div class="facts">
-            <div class="fact">
-              <span class="mono">Prix</span>
-              <b>30 €</b>
-            </div>
-            <div class="fact">
-              <span class="mono">Taille</span>
-              <b>Unique</b>
-            </div>
-            <div class="fact">
-              <span class="mono">Réglable</span>
-              <b>Oui</b>
-            </div>
-            <div class="fact">
-              <span class="mono">Broderie</span>
-              <b>France</b>
-            </div>
-          </div>
-          <div class="ticks" aria-hidden="true">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
+              <p>Un coton dense et des surpiqûres régulières sur la visière, pour qu'elle garde sa forme.</p>
+            </article>
+            <article class="card">
+              <div class="card-img card-img--type">
+                <span>
+                  Brodée
+                  <br />
+                  en France
+                </span>
+              </div>
+              <h3>Taille unique</h3>
+              <p>Une patte réglable à l'arrière, qui s'ajuste en deux secondes à toutes les têtes.</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="order" aria-label="Commander">
+      <section id="identite" aria-label="Plus qu'une casquette, une identité">
+        <div class="id-sticky">
+          <div class="id-bolts" aria-hidden="true"></div>
+          <p class="id-title">
+            Plus qu'une casquette,
+            <br />
+            <em>une identité.</em>
+          </p>
+        </div>
+      </section>
+
+      <section id="order" aria-labelledby="order-h">
         <div class="glow"></div>
         <div class="ogrid">
-          <div class="photo" id="photo">
-            <img src="img/casquette-face.png" alt="Casquette Thunderbolt blanche, vue de face" />
-            <img src="img/casquette-profil.png" alt="Casquette Thunderbolt blanche, vue de profil" />
-            <div class="dots">
-              <button class="on" aria-label="Vue de face"></button>
-              <button aria-label="Vue de profil"></button>
+          <div class="gallery">
+            <div class="gallery-main" id="galleryMain">
+              <img class="on" src="img/casquette-face.png" alt="Casquette Thunderbolt blanche, vue de face" />
+              <img
+                src="img/casquette-profil.png"
+                alt="Casquette Thunderbolt blanche, vue de profil"
+                loading="lazy"
+              />
+              <img
+                class="cover"
+                src="img/broderie.png"
+                alt="Gros plan sur la broderie du logo"
+                loading="lazy"
+              />
+            </div>
+            <div class="thumbs">
+              <button class="on" type="button" aria-label="Voir la casquette de face" aria-pressed="true">
+                <img src="img/casquette-face.png" alt="" />
+              </button>
+              <button type="button" aria-label="Voir la casquette de profil" aria-pressed="false">
+                <img src="img/casquette-profil.png" alt="" loading="lazy" />
+              </button>
+              <button type="button" aria-label="Voir la broderie de près" aria-pressed="false">
+                <img class="cover" src="img/broderie.png" alt="" loading="lazy" />
+              </button>
             </div>
           </div>
           <div class="otxt">
-            <span class="mono" style="opacity: 0.6">Commander · Blanc</span>
-            <h2>
-              Ta casquette,
-              <br />
-              <em>en deux clics.</em>
+            <p class="eyebrow mono">Commander</p>
+            <h2 id="order-h">
+              La casquette
+              <em>Thunderbolt</em>
             </h2>
+            <div class="priceline">
+              <b>30 €</b>
+              <span>+ 5 € de livraison</span>
+            </div>
             <p>
               Casquette blanche, logo éclair brodé fil par fil. Sobre, reconnaissable, pensée pour être portée
               tous les jours.
             </p>
-            <div class="priceline">
-              <b>30 €</b>
-              <span class="mono">+ 5 € de livraison</span>
-            </div>
             <ul class="olist">
               <li>
-                <span>Livraison</span>
-                <span>5 € · 5 à 10 jours</span>
+                <span>Couleur</span>
+                <span>Blanc</span>
               </li>
               <li>
                 <span>Taille</span>
                 <span>Unique, réglable</span>
               </li>
               <li>
+                <span>Matière</span>
+                <span>Coton épais</span>
+              </li>
+              <li>
                 <span>Broderie</span>
                 <span>Faite en France</span>
+              </li>
+              <li>
+                <span>Livraison</span>
+                <span>5 € · 5 à 10 jours</span>
               </li>
             </ul>
             <a id="buy" href="#order">
@@ -339,7 +373,7 @@
         </div>
         <nav class="foot__col" aria-label="La casquette">
           <h3 class="mono">La casquette</h3>
-          <a href="#inside">Détails</a>
+          <a href="#details">Détails</a>
           <a href="#order">Commander</a>
           <a href="#faq">Questions</a>
         </nav>
@@ -359,8 +393,6 @@
         <span>Site réalisé par Studio Relief</span>
       </div>
     </footer>
-
-    <div id="inFront" aria-hidden="true"></div>
 
     <script src="js/main.js"></script>
   </body>

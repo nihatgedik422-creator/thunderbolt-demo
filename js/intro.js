@@ -9,6 +9,9 @@
     window.__introDone = true;
     intro.classList.add('done');
     document.body.classList.remove('locked');
+    // the hero's words and cap enter as the curtain lifts (styled in css/style.css, .ready)
+    var hero = document.getElementById('hero');
+    if (hero) hero.classList.add('ready');
     setTimeout(function () {
       intro.style.display = 'none';
     }, 950);
